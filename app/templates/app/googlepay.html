@@ -1,0 +1,26 @@
+<!-- payment/googlepay.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google Pay Integration</title>
+</head>
+<body>
+    <!-- Your content -->
+    <div id="google-pay-button">GooglePay</div>
+
+    <script src="https://pay.google.com/gp/p/js/pay.js"></script>
+    <script>
+        googlePayClient =
+            new google.payments.api.PaymentsClient({environment: 'TEST'});
+        const button =
+            googlePayClient.createButton({onClick: handleGooglePayPayment});
+        document.getElementById('google-pay-button').appendChild(button);
+
+        function handleGooglePayPayment() {
+            // Implement Google Pay payment flow
+            // Retrieve payment data and send it to your Django server
+            // Handle the server's response accordingly
+        }
+    </script>
+</body>
+</html>

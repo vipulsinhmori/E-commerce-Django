@@ -1,0 +1,1 @@
+web: gunicon shoppinglyx.wsgi --log-file -
